@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BatchStarter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Background="{DynamicResource DefaultPaper}"
+        Height="450" Width="800" WindowStyle="None">
     <Grid>
-
+        <Button Content="종료" Command="{Binding CloseCmd}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" Width="100" Height="30" Margin="5, 0" />
     </Grid>
 </Window>

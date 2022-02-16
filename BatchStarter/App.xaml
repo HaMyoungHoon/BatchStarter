@@ -2,8 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:BatchStarter"
-             StartupUri="MainWindow.xaml">
+             xmlns:theme="clr-namespace:BatchStarter.Data.Resource">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <theme:BundledTheme BaseTheme="Inherit" PrimaryColor="BlueGrey" SecondaryColor="DeepOrange" />
+                <ResourceDictionary Source="./Data/Resource/DefaultDark.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

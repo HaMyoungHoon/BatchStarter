@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+    <Color x:Key="DefaultShadow">#AA000000</Color>
+    <SolidColorBrush x:Key="DefaultShadowBrush" Color="{StaticResource DefaultShadow}" />
+    <DropShadowEffect x:Key="DefaultShadowDepth1" BlurRadius="10" ShadowDepth="0.50" Direction="270" Color="{StaticResource DefaultShadow}" Opacity="0.42" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="DefaultShadowDepth2" BlurRadius="15" ShadowDepth="1.00" Direction="270" Color="{StaticResource DefaultShadow}" Opacity="0.42" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="DefaultShadowDepth3" BlurRadius="20" ShadowDepth="5.00" Direction="270" Color="{StaticResource DefaultShadow}" Opacity="0.42" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="DefaultShadowDepth4" BlurRadius="25" ShadowDepth="10.0" Direction="270" Color="{StaticResource DefaultShadow}" Opacity="0.42" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="DefaultShadowDepth5" BlurRadius="30" ShadowDepth="15.0" Direction="270" Color="{StaticResource DefaultShadow}" Opacity="0.42" RenderingBias="Performance" po:Freeze="True" />
+</ResourceDictionary>

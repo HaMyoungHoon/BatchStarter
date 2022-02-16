@@ -7,4 +7,17 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Resource\Color\Primary\" />
+    <Folder Include="Lib\" />
+    <Folder Include="Files\" />
+    <Folder Include="Screen\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BaseLib_Net6">
+      <HintPath>Lib\BaseLib_Net6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
