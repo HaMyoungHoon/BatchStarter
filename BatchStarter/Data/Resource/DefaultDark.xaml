@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="./Element/Default.TextBox.xaml" />
         <ResourceDictionary Source="./Element/Default.Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -12,4 +13,5 @@
     <SolidColorBrush x:Key="LightSeparatorBackground" Color="#1FFFFFFF" />
 
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DefaultRaisedButton}" />
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource DefaultTextBox}" />
 </ResourceDictionary>

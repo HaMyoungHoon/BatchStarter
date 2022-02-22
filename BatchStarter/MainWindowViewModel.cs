@@ -1,5 +1,6 @@
 ﻿using BatchStarter.Base;
 using BatchStarter.Data;
+using BatchStarter.Screen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +18,10 @@ namespace BatchStarter
 {
     internal class MainWindowViewModel : INotifyPropertyChanged
     {
+        private readonly List<PageCmd> _pageCmd;
         public MainWindowViewModel()
         {
+            _pageCmd = new();
             CloseCmd = new CommandImpl(CloseEvent);
         }
 
@@ -26,13 +29,6 @@ namespace BatchStarter
 
         private void CloseEvent(object? obj)
         {
-            var canClose = FBaseFunc.Ins.CanClose(out string err);
-            if (canClose == false)
-            {
-                MessageBox.Show(err);
-                return;
-            }
-
             if (MessageBox.Show("are you sure?", "close", MessageBoxButton.YesNo) != MessageBoxResult.Yes)
             {
                 MessageBox.Show("no click");
@@ -41,14 +37,56 @@ namespace BatchStarter
 
             FBaseFunc.Ins.TerminateSystem();
 
-            Window? window = obj as Window;
-            if (window != null)
+            if (obj is Window window)
             {
                 App.WindowInstance.DestroyWPF();
                 window.Close();
             }
         }
 
+        public void PageInit()
+        {
+            int cmdCount = FBaseFunc.Ins.Cfg.CmdCount;
+            if (cmdCount <= 0)
+            {
+                return;
+            }
+
+            int row = cmdCount / 2;
+            int col = cmdCount / 2;
+            if (row * col < cmdCount)
+            {
+                row++;
+            }
+
+            var grid = App.WindowInstance.mainGrid;
+
+            for (int i = 0; i < col; i++)
+            {
+                grid.ColumnDefinitions.Add(new ColumnDefinition());
+            }
+
+            for (int i = 0; i < row; i++)
+            {
+                grid.RowDefinitions.Add(new RowDefinition());
+
+                for (int j = 0; j < col; j++)
+                {
+                    int ij = i * col + j;
+                    if (ij >= cmdCount)
+                    {
+                        continue;
+                    }
+
+                    _pageCmd.Add(new PageCmd(ij));
+                    Frame frame = new();
+                    Grid.SetColumn(frame, j);
+                    Grid.SetRow(frame, i);
+                    frame.Content = _pageCmd[ij];
+                    grid.Children.Add(frame);
+                }
+            }
+        }
         public void SetMessageHook(Window mother)
         {
             WindowInteropHelper helper = new(mother);

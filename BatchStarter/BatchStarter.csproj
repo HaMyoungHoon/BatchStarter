@@ -8,10 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Resource\Color\Primary\" />
     <Folder Include="Lib\" />
     <Folder Include="Files\" />
-    <Folder Include="Screen\" />
   </ItemGroup>
 
   <ItemGroup>

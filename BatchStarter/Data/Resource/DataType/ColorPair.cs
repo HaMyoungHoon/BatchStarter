@@ -1,4 +1,5 @@
-﻿using System.Windows.Media;
+﻿using BatchStarter.Data.Resource.Helper;
+using System.Windows.Media;
 
 namespace BatchStarter.Data.Resource
 {
@@ -8,7 +9,7 @@ namespace BatchStarter.Data.Resource
 
         public Color? ForegroundColor { get; set; }
 
-        public static implicit operator ColorPair(Color color) => new ColorPair(color);
+        public static implicit operator ColorPair(Color color) => new(color);
 
         public ColorPair(Color color)
         {

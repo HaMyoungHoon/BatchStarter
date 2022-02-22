@@ -1,9 +1,9 @@
-﻿using BatchStarter.Data.Resource.Helper;
+﻿using BatchStarter.Data.Resource.ColorSwatch;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Media;
 
-namespace BatchStarter.Data.Resource
+namespace BatchStarter.Data.Resource.Helper
 {
     internal class SwatchHelper
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Media;
 
-namespace BatchStarter.Data.Resource
+namespace BatchStarter.Data.Resource.Helper
 {
     internal static class ColorHelper
     {

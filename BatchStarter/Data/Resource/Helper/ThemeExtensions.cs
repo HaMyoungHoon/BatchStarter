@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Media;
 
-namespace BatchStarter.Data.Resource
+namespace BatchStarter.Data.Resource.Helper
 {
     internal static class ThemeExtensions
     {
@@ -52,6 +52,7 @@ namespace BatchStarter.Data.Resource
 
             theme.ValidationError = baseTheme.ValidationErrorColor;
             theme.Background = baseTheme.DefaultBackground;
+            theme.Foreground = baseTheme.DefaultForeground;
             theme.Paper = baseTheme.DefaultPaper;
             theme.CardBackground = baseTheme.DefaultCardBackground;
             theme.ToolBarBackground = baseTheme.DefaultToolBarBackground;

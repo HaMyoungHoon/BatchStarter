@@ -20,7 +20,14 @@ namespace BatchStarter
         private static MainWindow? _windowInstance;
         public static MainWindow WindowInstance
         {
-            get { return _windowInstance ??= new(); }
+            get
+            {
+                if (_windowInstance == null)
+                {
+                    _windowInstance = new MainWindow();
+                }
+                return _windowInstance;
+            }
         }
 
         protected override void OnStartup(StartupEventArgs e)

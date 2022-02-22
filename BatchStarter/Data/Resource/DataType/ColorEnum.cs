@@ -20,7 +20,7 @@
         DeepOrange = ColorEnum.DeepOrange500,
         Brown = ColorEnum.Brown500,
         Grey = ColorEnum.Grey500,
-        BlueGrey = ColorEnum.BlueGrey500,
+        BlueGrey = ColorEnum.BlueGrey600,
     }
 
     public enum SecondaryColor

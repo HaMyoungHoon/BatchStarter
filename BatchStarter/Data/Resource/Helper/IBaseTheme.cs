@@ -1,11 +1,12 @@
 ﻿using System.Windows.Media;
 
-namespace BatchStarter.Data.Resource
+namespace BatchStarter.Data.Resource.Helper
 {
     public interface IBaseTheme
     {
         Color ValidationErrorColor { get; }
         Color DefaultBackground { get; }
+        Color DefaultForeground { get; }
         Color DefaultPaper { get; }
         Color DefaultCardBackground { get; }
         Color DefaultToolBarBackground { get; }

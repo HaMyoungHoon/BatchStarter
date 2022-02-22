@@ -37,6 +37,7 @@ namespace BatchStarter.Data.Resource.Helper
             resourceDictionary["ValidationErrorColor"] = theme.ValidationError;
 
             SetSolidColorBrush(resourceDictionary, "DefaultBackground", theme.Background);
+            SetSolidColorBrush(resourceDictionary, "DefaultForeground", theme.Foreground);
             SetSolidColorBrush(resourceDictionary, "DefaultPaper", theme.Paper);
             SetSolidColorBrush(resourceDictionary, "DefaultCardBackground", theme.CardBackground);
             SetSolidColorBrush(resourceDictionary, "DefaultToolBarBackground", theme.ToolBarBackground);

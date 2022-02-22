@@ -79,7 +79,7 @@ namespace BatchStarter.Base.Config
         {
             for (int i = 0; i < CmdCount; i++)
             {
-                BatchPath.Add(data.GetString($@"BATCH,{i}", ""));
+                BatchPath.Add(data.GetString($@"BATCH,PATH{i}", ""));
             }    
         }
 
@@ -93,7 +93,8 @@ namespace BatchStarter.Base.Config
         {
             string filePath = $@"{Directory.GetCurrentDirectory()}\Setting\{_cfgPath}";
             FFileParser xmlData = new(filePath, FFileParser.FILE_TYPE.XML);
-            xmlData.SetString($@"BATCH,{index}", path);
+            xmlData.SetString($@"BATCH,PATH{index}", path);
+            BatchPath[index] = path;
         }
     }
 }

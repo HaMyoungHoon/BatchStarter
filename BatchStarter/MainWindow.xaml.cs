@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BatchStarter.Screen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,7 @@ namespace BatchStarter
         protected override void OnSourceInitialized(EventArgs e)
         {
             base.OnSourceInitialized(e);
+            ((MainWindowViewModel)App.WindowInstance.DataContext).PageInit();
             ((MainWindowViewModel)DataContext).SetMessageHook(this);
         }
 

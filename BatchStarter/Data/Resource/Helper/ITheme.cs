@@ -1,6 +1,6 @@
 ﻿using System.Windows.Media;
 
-namespace BatchStarter.Data.Resource
+namespace BatchStarter.Data.Resource.Helper
 {
     internal interface ITheme
     {
@@ -14,6 +14,7 @@ namespace BatchStarter.Data.Resource
 
         Color ValidationError { get; set; }
         Color Background { get; set; }
+        Color Foreground { get; set; }
         Color Paper { get; set; }
         Color CardBackground { get; set; }
         Color ToolBarBackground { get; set; }
